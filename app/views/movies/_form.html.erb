@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= form.label :genre_id %>
-    <%= form.number_field :genre_id, id: :movie_genre_id %>
+    <%= form.collection_select :genre_id,Genre.order(name), :id, :name, :include_blank => "Select from List" %>
   </div>
 
   <div class="actions">
